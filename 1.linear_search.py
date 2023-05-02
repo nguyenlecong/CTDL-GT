@@ -1,13 +1,4 @@
-import random
-
-
-def san_sinh_mang(n):
-    mang = []
-    for i in range(n):
-        so_ngau_nhien = random.randint(-100, 100)
-        mang.append(so_ngau_nhien)
-
-    return mang
+from utils import san_sinh_mang
 
 
 def tim_tuyen_tinh(mang, x):
