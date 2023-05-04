@@ -25,6 +25,8 @@ class DSLienKet:
         kq += ']'
         print(kq)
 
+        return kq
+
     def them(self, gia_tri):
         nut = Nut(gia_tri)
         if self.dau == None:
@@ -113,3 +115,18 @@ class DSLienKet:
             tam = hien_tai
             hien_tai = hien_tai.nut_ke_tiep
             del tam
+
+    def lay_dau(self):
+        if self.dau == None:
+            return None
+        else:
+            return self.dau.gia_tri
+
+    def xoa_dau(self):
+        tam = self.dau
+        if self.dau == self.duoi:
+            self.dau = self.duoi = None
+        else:
+            self.dau = self.dau.nut_ke_tiep
+
+        del tam
