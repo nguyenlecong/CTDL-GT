@@ -130,3 +130,12 @@ class DSLienKet:
             self.dau = self.dau.nut_ke_tiep
 
         del tam
+
+    def them_duoi(self, gia_tri):
+        nut = Nut(gia_tri)
+        if self.dau == None:
+            self.dau = nut
+            self.duoi = nut
+        else:
+            self.duoi.nut_ke_tiep = nut
+            self.duoi = nut
